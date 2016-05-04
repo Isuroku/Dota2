@@ -61,20 +61,22 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net40\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
-      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+      <HintPath>packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Stateless, Version=2.5.21.0, Culture=neutral, PublicKeyToken=93038f0927583c9a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Stateless.2.5.21.0\lib\portable-net40+sl50+win+wp80\Stateless.dll</HintPath>
+    <Reference Include="Snappy.Sharp">
+      <HintPath>..\..\..\DotaBot\DotaBotFirst\DLLs\Snappy.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Stateless, Version=2.5.62.0, Culture=neutral, PublicKeyToken=93038f0927583c9a, processorArchitecture=MSIL">
+      <HintPath>packages\Stateless.2.5.62.0\lib\portable-net40+sl50+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Stateless.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="SteamKit2, Version=1.6.4.32461, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SteamKit2.1.6.4\lib\net40\SteamKit2.dll</HintPath>
+    <Reference Include="SteamDota2Dll">
+      <HintPath>..\..\..\DotaBot\DotaBotFirst\DLLs\SteamDotaProtobuf\SteamDota2Dll.dll</HintPath>
+    </Reference>
+    <Reference Include="SteamKit2, Version=1.4.1.35606, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\SteamKit2.1.4.1\lib\net40\SteamKit2.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -147,17 +149,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Dependencies\SnappySharp\Snappy.Sharp\Snappy.Sharp.csproj">
-      <Project>{3de0ff31-8a1d-4485-b725-d120cd91d205}</Project>
-      <Name>Snappy.Sharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dota2\Dota2.csproj">
-      <Project>{beb5bf07-bb56-402a-97a3-a41c6444c6a5}</Project>
-      <Name>Dota2</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
